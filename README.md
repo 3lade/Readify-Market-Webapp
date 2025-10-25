@@ -1,5 +1,4 @@
-# Readify-Market-Webapp
-
+# 📚 BookStore E-Commerce Platform
 
 [![React](https://img.shields.io/badge/React-18.x-61DAFB?logo=react)](https://reactjs.org/)
 [![Redux](https://img.shields.io/badge/Redux-Toolkit-764ABC?logo=redux)](https://redux-toolkit.js.org/)
@@ -59,15 +58,46 @@
 - **CSS Modules** - Styled components
 - **Jest & React Testing Library** - Testing framework
 
-### Backend
-- **Node.js** - Server runtime environment
-- **Express.js** - Web application framework
-- **MongoDB** - NoSQL database
-- **Mongoose** - MongoDB object modeling
-- **JWT** - Authentication mechanism
-- **Bcrypt** - Password hashing
-- **Nodemailer** - Email service integration
-- **Express Validator** - Input validation
+### Backend (nodeapp)
+- **Node.js & Express.js** - RESTful API server
+- **MongoDB & Mongoose** - Database integration with schemas
+- **JWT & Bcrypt** - Secure authentication system
+- **Express Validator** - Request validation
+- **Swagger** - API documentation
+- **Jest & Supertest** - API testing
+- **CORS** - Cross-origin resource sharing
+- **File System Integration** - JSON file-based data handling
+
+#### API Features
+- **User Management**
+  - Authentication (Login/Register)
+  - JWT token-based authorization
+  - Password hashing with Bcrypt
+  - Role-based access (Admin/User)
+
+- **Book Management**
+  - CRUD operations for books
+  - Search and filter capabilities
+  - Stock management
+  - Category organization
+
+- **Order System**
+  - Order creation and tracking
+  - Order history
+  - Status management
+  - Purchase validation
+
+- **Review System**
+  - Book reviews and ratings
+  - User review management
+  - Review moderation
+  - Rating analytics
+
+- **Data Persistence**
+  - MongoDB database integration
+  - JSON file backup system
+  - Data validation middleware
+  - Error handling
 
 ### DevOps & Tools
 - **Git** - Version control
@@ -80,51 +110,115 @@
 ## 📦 Project Structure
 ```
 project/
-├── reactapp/                  # Frontend application
+├── reactapp/                    # Frontend application
 │   ├── src/
-│   │   ├── AdminComponents/   # Admin interface
-│   │   ├── UserComponents/    # User interface
-│   │   ├── Components/        # Shared components
-│   │   ├── services/         # API services
-│   │   └── tests/            # Frontend tests
-│   └── public/               # Static files
-├── appdb/                    # Backend database
-│   ├── models/              # MongoDB schemas
-│   ├── controllers/         # Business logic
-│   ├── routes/             # API routes
-│   ├── middleware/         # Custom middleware
-│   └── config/             # Configuration files
-└── react/                   # Development scripts
-    └── tests/              # Backend tests
+│   │   ├── AdminComponents/     # Admin interface
+│   │   ├── UserComponents/      # User interface
+│   │   ├── Components/          # Shared components
+│   │   ├── services/           # API services
+│   │   └── tests/              # Frontend tests
+│   └── public/                 # Static files
+├── nodeapp/                    # Backend API server
+│   ├── controllers/           # Request handlers
+│   ├── models/               # MongoDB schemas
+│   ├── routes/               # API routes
+│   ├── middleware/           # Custom middleware
+│   ├── tests/               # API tests
+│   ├── booksData.json       # Books data backup
+│   ├── userData.json        # User data backup
+│   └── index.js            # Server entry point
+└── react/                    # Development scripts
+    └── tests/               # Additional tests
 ```
 
 ## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- MongoDB
+- npm or yarn
+
+### Installation
 
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
    ```
 
-2. **Install dependencies**
+2. **Setup Frontend**
    ```bash
    cd reactapp
    npm install
    ```
 
-3. **Start the development server**
+3. **Setup Backend**
    ```bash
+   cd ../nodeapp
+   npm install
+   ```
+
+4. **Start Development Servers**
+   ```bash
+   # Terminal 1 - Frontend
+   cd reactapp
+   npm start
+
+   # Terminal 2 - Backend
+   cd ../nodeapp
    npm start
    ```
 
-4. **Run tests**
-   ```bash
-   npm test
-   ```
+## 🔒 Environment Variables & Configuration
 
-## 🔒 Environment Variables
-Create a `.env` file in the root directory:
+### Frontend Configuration
 ```env
-REACT_APP_API_URL=your_api_url
+REACT_APP_API_URL=http://localhost:8080
+REACT_APP_NODE_ENV=development
+PORT=8081
+```
+
+### Backend Configuration
+```env
+NODE_ENV=development
+PORT=8080
+MONGODB_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+CORS_ORIGIN=http://localhost:8081
+```
+
+### API Endpoints
+
+#### Authentication
+```
+POST /api/users/register - User registration
+POST /api/users/login - User login
+GET /api/users/profile - Get user profile
+PUT /api/users/profile - Update user profile
+```
+
+#### Books
+```
+GET /api/books - Get all books
+GET /api/books/:id - Get book by ID
+POST /api/books - Add new book (Admin)
+PUT /api/books/:id - Update book (Admin)
+DELETE /api/books/:id - Delete book (Admin)
+```
+
+#### Orders
+```
+POST /api/orders - Create new order
+GET /api/orders - Get user orders
+GET /api/orders/:id - Get order details
+PUT /api/orders/:id - Update order status (Admin)
+```
+
+#### Reviews
+```
+POST /api/reviews - Add book review
+GET /api/reviews/book/:id - Get book reviews
+PUT /api/reviews/:id - Update review
+DELETE /api/reviews/:id - Delete review
 ```
 
 ## 🧪 Testing
