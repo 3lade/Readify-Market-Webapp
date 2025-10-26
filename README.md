@@ -254,5 +254,5 @@ For support, email support@bookstore.com or join our Slack channel.
 ---
 
 <div align="center">
-Made with ❤️ by Your Team
+Made with ❤️ by 3lade
 </div>
