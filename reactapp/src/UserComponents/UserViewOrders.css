@@ -1,0 +1,216 @@
+.user-vieworders-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+  }
+  
+  .orders-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .orders-container h1 {
+    text-align: center;
+    color: #1976d2;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .order-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 5px solid #7b1fa2;
+  }
+  
+  .order-card h3 {
+    color: #7b1fa2;
+    margin-bottom: 1rem;
+  }
+  
+  .order-card p {
+    color: #333;
+    margin: 0.5rem 0;
+  }
+  
+  .order-books {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f5f5f5;
+    border-radius: 5px;
+  }
+  
+  .order-books p {
+    margin: 0.25rem 0;
+  }
+  
+  .order-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .track-btn,
+  .view-items-btn,
+  .cancel-btn {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .track-btn {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .view-items-btn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .cancel-btn {
+    background-color: #ef5350;
+    color: white;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    position: relative;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .tracking-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    position: relative;
+  }
+  
+  .tracking-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .tracking-step:not(.first)::before {
+    content: '';
+    position: absolute;
+    left: -50%;
+    right: 50%;
+    top: 15px;
+    height: 3px;
+    background-color: #ddd;
+    z-index: -1;
+  }
+  
+  .tracking-step.active:not(.first)::before {
+    background-color: #4caf50;
+  }
+  
+  .step-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tracking-step.active .step-circle {
+    background-color: #4caf50;
+  }
+  
+  .step-label {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+  }
+  
+  .tracking-step.active .step-label {
+    color: #4caf50;
+    font-weight: bold;
+  }
+  
+  .items-list {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .item-card {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+    text-align: left;
+  }
+  
+  .item-card h4 {
+    color: #7b1fa2;
+    margin-bottom: 0.5rem;
+  }
+  
+  .modal-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .confirm-btn,
+  .cancel-modal-btn {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .confirm-btn {
+    background-color: #ef5350;
+    color: white;
+  }
+  
+  .cancel-modal-btn {
+    background-color: #bbb;
+    color: white;
+  }

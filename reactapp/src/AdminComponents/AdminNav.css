@@ -1,0 +1,76 @@
+/* Gradient background */
+.admin-nav {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Brand hover */
+.navbar-brand:hover {
+  color: #81d4fa !important;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* Smooth dropdown animation */
+.animate-dropdown {
+  animation: fadeSlide 0.2s ease;
+}
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Dropdown items */
+.dropdown-item {
+  font-weight: 500;
+  transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
+.dropdown-item:hover {
+  background-color: #f0f7ff;
+  color: #1e3a5f;
+  padding-left: 1.5rem;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.2s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Simple logout modal */
+.simple-logout-modal {
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 460px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.simple-logout-modal .modal-header,
+.simple-logout-modal .modal-footer {
+  border: none;
+  padding: 1rem 1.25rem;
+}
+
+.simple-logout-modal .modal-body {
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+}
+
+.simple-logout-modal .modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}

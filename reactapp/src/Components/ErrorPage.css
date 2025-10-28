@@ -1,0 +1,42 @@
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .error-icon {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2rem;
+  }
+  
+  .error-page h1 {
+    color: #e74c3c;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .error-page p {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .home-btn {
+    padding: 1rem 2rem;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .home-btn:hover {
+    background-color: #2980b9;
+  }

@@ -1,0 +1,140 @@
+/* Background + container */
+.signup-page {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fef5e7 0%, #e8f8f5 100%);
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.signup-container {
+  max-width: 950px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Left side image */
+.signup-left {
+  min-height: 600px;
+}
+.signup-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right side form */
+.signup-right {
+  padding: 2rem;
+}
+
+/* Logo */
+.logo {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 0.5rem;
+  object-fit: contain;
+}
+
+/* Success modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.2s ease;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal-content {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 420px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.25rem;
+  background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: white;
+  animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
+}
+
+.modal-content h3 {
+  color: #27ae60;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Responsive tweaks */
+@media (max-width: 968px) {
+  .signup-container {
+    flex-direction: column;
+    max-width: 500px;
+  }
+  .signup-left {
+    min-height: 250px;
+  }
+  .signup-left img {
+    max-height: 250px;
+    object-fit: cover;
+  }
+  .signup-right {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-page {
+    padding: 1rem;
+  }
+  .signup-right {
+    padding: 1.25rem 1rem;
+  }
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  .modal-content {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+  .success-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+}

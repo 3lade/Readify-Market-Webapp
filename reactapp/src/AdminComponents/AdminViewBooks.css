@@ -1,0 +1,179 @@
+.admin-view-books-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+  }
+  
+  .admin-books-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .admin-books-container h1 {
+    text-align: center;
+    color: #7b1fa2;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .search-input,
+  .category-filter {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .search-input:focus,
+  .category-filter:focus {
+    outline: none;
+    border-color: #7b1fa2;
+  }
+  
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .book-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .book-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .book-card h3 {
+    color: #7b1fa2;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .book-card .author {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+  }
+  
+  .book-card .price {
+    color: #2e7d32;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .book-card .stock,
+  .book-card .category {
+    color: #555;
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+  }
+  
+  .card-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .edit-btn {
+    background-color: #7b1fa2;
+    color: white;
+  }
+  
+  .edit-btn:hover {
+    background-color: #6a1b9a;
+  }
+  
+  .delete-btn {
+    background-color: #ef5350;
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 450px;
+    border: 3px solid #f9ce34;
+  }
+  
+  .modal-content h3 {
+    color: #e67e22;
+    margin-bottom: 1.5rem;
+  }
+  
+  .modal-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .modal-actions button {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .confirm-btn {
+    background-color: #ef5350;
+    color: white;
+  }
+  
+  .cancel-btn {
+    background-color: #bbb;
+    color: white;
+  }

@@ -1,0 +1,231 @@
+.user-view-books-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+  }
+  
+  .books-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .books-container h1 {
+    text-align: center;
+    color: #1976d2;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    display: block;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .book-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .book-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .book-card h3 {
+    color: #1976d2;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .book-card .price {
+    color: #2e7d32;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .book-card .author {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+  }
+  
+  .book-card .stock {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    font-weight: 600;
+  }
+  
+  .in-stock {
+    color: #4caf50;
+  }
+  
+  .limited-stock {
+    color: #ff9800;
+  }
+  
+  .out-of-stock {
+    color: #f44336;
+  }
+  
+  .quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .quantity-selector select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .add-to-cart-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .add-to-cart-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .review-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+  }
+  
+  .view-reviews-btn,
+  .write-review-btn {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .view-reviews-btn {
+    background-color: #424242;
+    color: white;
+  }
+  
+  .write-review-btn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .reviews-modal h2 {
+    margin-bottom: 1.5rem;
+    color: #1976d2;
+  }
+  
+  .reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .review-item {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .username {
+    background-color: #5e35b1;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .rating {
+    color: #f9a825;
+  }
+  
+  .review-text {
+    color: #333;
+    line-height: 1.5;
+    margin: 0.5rem 0;
+  }
+  
+  .review-date {
+    color: #666;
+    font-size: 0.85rem;
+    font-style: italic;
+  }

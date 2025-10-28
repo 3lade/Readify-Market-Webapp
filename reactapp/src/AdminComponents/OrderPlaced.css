@@ -1,0 +1,157 @@
+.orderplaced-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #e1f5fe 100%);
+  }
+  
+  .orderplaced-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .orderplaced-container h1 {
+    text-align: center;
+    color: #7b1fa2;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .search-input,
+  .sort-select {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .order-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 5px solid #7b1fa2;
+  }
+  
+  .order-card h3 {
+    color: #7b1fa2;
+    margin-bottom: 1rem;
+  }
+  
+  .order-card p {
+    color: #333;
+    margin: 0.5rem 0;
+  }
+  
+  .status-update {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .status-update label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .status-update select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .order-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .view-books-btn,
+  .view-profile-btn {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .view-books-btn {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .view-profile-btn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    position: relative;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .books-list,
+  .profile-modal {
+    text-align: left;
+  }
+  
+  .book-item {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+  }
+  
+  .book-item h4 {
+    color: #7b1fa2;
+    margin-bottom: 0.5rem;
+  }
+  
+  .profile-modal p {
+    margin: 1rem 0;
+    color: #333;
+  }

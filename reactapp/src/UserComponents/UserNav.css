@@ -1,0 +1,68 @@
+/* ---------------- CART OVERLAY + PANEL ---------------- */
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1050;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart-panel {
+  width: 350px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+.panel-body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ---------------- DROPDOWN ANIMATION ---------------- */
+.animate-dropdown {
+  animation: fadeSlide 0.2s ease;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------- LOGOUT MODAL ---------------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.simple-logout-modal {
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 460px;   /* wider so it doesn’t feel cramped */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.simple-logout-modal .modal-header,
+.simple-logout-modal .modal-footer {
+  border: none;
+  padding: 1rem 1.25rem;
+}
+
+.simple-logout-modal .modal-body {
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+}
+
+.simple-logout-modal .modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
